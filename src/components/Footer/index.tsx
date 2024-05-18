@@ -5,7 +5,8 @@ const Footer = () => (
   <Container>
     <Logotipo src={logo} />
     <Container_Svg>
-      <svg style={{margin:'4px'}}
+      <svg
+        style={{ margin: '4px' }}
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -36,7 +37,8 @@ const Footer = () => (
           </clipPath>
         </defs>
       </svg>
-      <svg style={{margin:'4px'}}
+      <svg
+        style={{ margin: '4px' }}
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -55,7 +57,8 @@ const Footer = () => (
           </clipPath>
         </defs>
       </svg>
-      <svg style={{margin:'4px'}}
+      <svg
+        style={{ margin: '4px' }}
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -75,7 +78,11 @@ const Footer = () => (
         </defs>
       </svg>
     </Container_Svg>
-    <P_footer>A efood é uma plataforma para divulgação de estabelecimentos, a responsabilidade pela entrega, qualidade dos produtos é toda do estabelecimento contratado. </P_footer>
+    <P_footer>
+      A efood é uma plataforma para divulgação de estabelecimentos, a
+      responsabilidade pela entrega, qualidade dos produtos é toda do
+      estabelecimento contratado.{' '}
+    </P_footer>
   </Container>
 )
 export default Footer

@@ -11,7 +11,7 @@ import {
   Div_Tag,
   Estrela
 } from './styles'
-import Food from '../../models/Food'
+import { Pratos } from '../../assets/pages/Home'
 
 type Props = {
   title: string
@@ -19,28 +19,15 @@ type Props = {
   infos: string[]
   image: string
   nota: number
-  foods: Food[]
+  foods: Pratos[]
   banner: string
+  id: number
 }
 
-const Product = ({
-  title,
-  description,
-  infos,
-  image,
-  nota,
-  foods,
-  banner
-}: Props) => {
+const Product = ({ title, description, infos, image, nota, id }: Props) => {
   const navigate = useNavigate()
   const handleClick = () => {
-    const dataArray = foods
-    const novo_banner = banner
-    const queryParams = new URLSearchParams({
-      data: JSON.stringify(dataArray),
-      novo_banner: novo_banner
-    }).toString()
-    navigate(`/restaurant?${queryParams}`)
+    navigate(`/restaurant/${id}`)
   }
   return (
     <Card>

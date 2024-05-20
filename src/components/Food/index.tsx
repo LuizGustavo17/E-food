@@ -1,5 +1,6 @@
 import { Card, Img, Title, Description, Button } from './styles'
-import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import Modal from '../Modal'
 type Props = {
   title: string
   description: string
@@ -16,16 +17,39 @@ const Food_Card = ({
   persons,
   price
 }: Props) => {
-  const navigate = useNavigate()
+  const getDescricao = (descricao: string) => {
+    if (descricao.length > 163) {
+      return descricao.slice(0, 160) + '...'
+    }
+    return descricao
+  }
+  const [showModal, setShowModal] = useState(false)
+
+  const handleOpenModal = () => {
+    setShowModal(true)
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false)
+  }
   const handleClick = () => {
-    navigate('/')
+    handleOpenModal()
   }
   return (
     <Card>
       <Img src={image} />
       <Title>{title}</Title>
-      <Description>{description}</Description>
+      <Description>{getDescricao(description)}</Description>
       <Button onClick={handleClick}>Adicionar ao carrinho</Button>
+      <Modal
+        show={showModal}
+        onClose={handleCloseModal}
+        persons={persons}
+        title={title}
+        details={details}
+        price={price}
+        image={image}
+      ></Modal>
     </Card>
   )
 }

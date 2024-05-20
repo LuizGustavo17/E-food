@@ -7,10 +7,10 @@ export const Header_Perfil = styled.header`
   width: 100vw;
   display: block;
   text-align: center;
-  position: fixed;
+  position: relative;
 `
 export const Image = styled.img`
-  margin-top: 180px;
+  margin-top: 0;
   height: 280px;
   width: 100vw;
 `

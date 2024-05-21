@@ -9,40 +9,34 @@ import {
   Add_to_Cart
 } from './styles'
 import Close_1 from '../../assets/images/Close_1.png'
+import { Pratos } from '../../assets/pages/Home'
+import { useDispatch } from 'react-redux'
+import { add, open } from '../../store/reducers/cart'
 interface ModalProps {
   show: boolean
   onClose: () => void
-  persons: string
-  title: string
-  details: string
-  price: number
-  image: string
+  prato: Pratos
 }
-
-const Modal: React.FC<ModalProps> = ({
-  show,
-  onClose,
-  title,
-  persons,
-  details,
-  price,
-  image
-}) => {
+const Modal: React.FC<ModalProps> = ({ show, onClose, prato }) => {
+  const dispatch = useDispatch()
   if (!show) {
     return null
   }
-
+  const addToCart = () => {
+    dispatch(add(prato))
+    dispatch(open())
+  }
   return (
     <Banner_Overlay>
       <Banner_Details>
         <Close_Button src={Close_1} onClick={onClose} />
-        <Img src={image} />
-        <Modal_Title>{title}</Modal_Title>
-        <Modal_Details>{details}</Modal_Details>
-        <Modal_Persons>{persons}</Modal_Persons>
-        <Add_to_Cart>
+        <Img src={prato.foto} />
+        <Modal_Title>{prato.nome}</Modal_Title>
+        <Modal_Details>{prato.descricao}</Modal_Details>
+        <Modal_Persons>{prato.porcao}</Modal_Persons>
+        <Add_to_Cart onClick={addToCart}>
           Adicionar ao carrinho - R${' '}
-          {price.toLocaleString('pt-BR', {
+          {prato.preco.toLocaleString('pt-BR', {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
           })}

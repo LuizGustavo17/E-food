@@ -4,16 +4,22 @@ import Second_Header from '../../../components/Second_Header'
 import { GlobalCSS } from '../../../styles'
 import Footer from '../../../components/Footer'
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useGetRestaurantsQuery } from '../../../services/api'
 
 const Perfil: React.FC = () => {
-  const [rest, setRest] = useState<Restaurant[]>([])
-  useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((res) => res.json())
-      .then((res) => setRest(res))
-  }, [])
+  const { data: rest, isLoading } = useGetRestaurantsQuery()
   const { id } = useParams<{ id?: string }>()
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
+  if (!rest) {
+    return <div>Error loading restaurants</div>
+  }
+
+  // Garantir que `rest` é um array
+  const restaurantsArray: Restaurant[] = Array.isArray(rest) ? rest : [rest]
 
   if (id === undefined) {
     return <div>Invalid restaurant ID</div>
@@ -25,7 +31,7 @@ const Perfil: React.FC = () => {
   if (isNaN(Id_number)) {
     return <div>Invalid restaurant ID</div>
   }
-  const selectedRestaurant = rest[Id_number - 1]
+  const selectedRestaurant = restaurantsArray[Id_number - 1]
   if (!selectedRestaurant) {
     return <div>Loading...</div>
   }
@@ -33,9 +39,9 @@ const Perfil: React.FC = () => {
     <>
       <GlobalCSS />
       <div className="container">
-        <Second_Header banner_image={rest[Id_number - 1].capa} />
+        <Second_Header banner_image={restaurantsArray[Id_number - 1].capa} />
       </div>
-      <FoodList foods={rest[Id_number - 1].cardapio} />
+      <FoodList foods={restaurantsArray[Id_number - 1].cardapio} />
       <Footer />
     </>
   )

@@ -9,15 +9,7 @@ const FoodList = ({ foods }: Props) => (
   <Div_Center>
     <Container>
       {foods.map((food) => (
-        <Food_Card
-          key={food.id}
-          title={food.nome}
-          description={food.descricao}
-          image={food.foto}
-          persons={food.porcao}
-          details={food.descricao}
-          price={food.preco}
-        />
+        <Food_Card key={food.id} prato={food} />
       ))}
     </Container>
   </Div_Center>

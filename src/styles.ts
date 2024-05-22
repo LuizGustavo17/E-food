@@ -5,7 +5,8 @@ export const cores = {
   softwhite: '#FFF8F2',
   red: '#E66767',
   background: '#FFF8F2',
-  white: '#FFF'
+  white: '#FFF',
+  placeholder: '#4B4B4B'
 }
 
 export const GlobalCSS = createGlobalStyle`

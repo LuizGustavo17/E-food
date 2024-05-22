@@ -8,6 +8,7 @@ export const HeaderBar = styled.header`
   width: 100vw;
   display: block;
   text-align: center;
+  align-items: center;
 `
 export const Logotipo = styled.img`
   width: 125px;

@@ -14,8 +14,8 @@ export const Container = styled.div`
 export const Container_Svg = styled.div`
   display: flex;
   position: absolute;
-  top: 128px;
-  left: 46.1vw;
+  top: 130px;
+  left: calc(50vw-44px);
 `
 export const P_footer = styled.p`
   position: absolute;
@@ -25,5 +25,5 @@ export const P_footer = styled.p`
   font-size: 10px;
   color: ${cores.red};
   text-align: center;
-  top: 256px;
+  top: 234px;
 `

@@ -39,7 +39,11 @@ const Perfil: React.FC = () => {
     <>
       <GlobalCSS />
       <div className="container">
-        <Second_Header banner_image={restaurantsArray[Id_number - 1].capa} />
+        <Second_Header
+          banner_image={restaurantsArray[Id_number - 1].capa}
+          name={restaurantsArray[Id_number - 1].titulo}
+          type={restaurantsArray[Id_number - 1].tipo}
+        />
       </div>
       <FoodList foods={restaurantsArray[Id_number - 1].cardapio} />
       <Footer />

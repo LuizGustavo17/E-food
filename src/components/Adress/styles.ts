@@ -5,23 +5,19 @@ export const Title2 = styled.h3`
   color: ${cores.primarypink};
   font-weight: 700px;
   font-size: 16px;
-  margin-left: 8px;
-  margin-top: 32px;
   margin-bottom: 16px;
+  line-height: 18.75px;
 `
 export const Label_Text = styled.label`
   color: ${cores.primarypink};
   font-weight: 700px;
   font-size: 14px;
-  margin-left: 8px;
 `
 export const WhiteSpace = styled.input`
-width:326px;
+width:344px;
 height:32px;
 background-color:${cores.primarypink};
 border:none;
-margin-right:8px;
-margin-left: 8px;
 margin-top:8px;
 margin-bottom:8px;
 ::placeholder{
@@ -30,41 +26,25 @@ margin-bottom:8px;
     font-size:14px;
 }
 `
-export const FormGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
-`
-
-export const WhiteSpaceSmall = styled.input`
-height:32px;
-width:155px;
-background-color:${cores.primarypink};
-border:none;
-margin-right:8px;
-margin-top:8px;
-margin-left:8px;
-margin-bottom:8px;
-width:155px;
-::placeholder{
-    color:${cores.placeholder}
-    font-weight:700px;
-    font-size:14px;
-}
-`
-export const Disflex = styled.div`
-  display: flex;
+export const Pdonne = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: ${cores.primarypink};
+  max-width: 344px;
+  margin-bottom: 24px;
 `
 export const Button2 = styled.button`
-  width: 326px;
+  width: 344px;
   height: 32px;
   background-color: ${cores.primarypink};
   border: none;
   margin-right: 8px;
-  margin-left: 8px;
   margin-bottom: 8px;
   font-weight: 700;
   text-align: center;
   font-size: 14px;
+  line-height: 16.41px;
   color: ${cores.red};
+  cursor: pointer;
 `

@@ -33,7 +33,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, prato }) => {
         <Img src={prato.foto} />
         <Modal_Title>{prato.nome}</Modal_Title>
         <Modal_Details>{prato.descricao}</Modal_Details>
-        <Modal_Persons>{prato.porcao}</Modal_Persons>
+        <Modal_Persons>Serve: {prato.porcao}</Modal_Persons>
         <Add_to_Cart onClick={addToCart}>
           Adicionar ao carrinho - R${' '}
           {prato.preco.toLocaleString('pt-BR', {

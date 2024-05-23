@@ -24,3 +24,21 @@ export const Phrase1 = styled(Profile_Phrase)`
 export const Phrase2 = styled(Profile_Phrase)`
   left: 70vw;
 `
+export const BannerPhrase1 = styled.h1`
+  position: absolute;
+  top: 25px;
+  left: 170px;
+  font-weight: 100;
+  font-size: 32px;
+  line-height: 37.5px;
+  color: ${cores.white};
+`
+export const BannerPhrase2 = styled.h1`
+  position: absolute;
+  top: 214.75px;
+  left: 170px;
+  font-weight: 900px;
+  font-size: 32px;
+  line-height: 37.5px;
+  color: ${cores.white};
+`

@@ -7,13 +7,19 @@ export type Props = {
 }
 
 const ProductsList = ({ restaurantes }: Props) => {
+  function capitalizeFirstLetter(string: string) {
+    if (typeof string !== 'string' || string.length === 0) {
+      return ''
+    }
+    return string.charAt(0).toUpperCase() + string.slice(1)
+  }
   function RetornaInfos(destacado: boolean, tipo: string) {
     const infos = []
     if (destacado == true) {
       infos[0] = 'Destaques da Semana'
-      infos[1] = tipo
+      infos[1] = capitalizeFirstLetter(tipo)
     } else {
-      infos[0] = tipo
+      infos[0] = capitalizeFirstLetter(tipo)
     }
     return infos
   }

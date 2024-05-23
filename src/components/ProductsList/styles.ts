@@ -3,11 +3,12 @@ export const Div_Center = styled.div`
   margin-top: 64px;
   display: flex;
   justify-content: center; /* Alinha os itens horizontalmente */
+  align-items: center;
 `
 export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
-  column-gap: 108px;
-  row-gap: 64px;
+  column-gap: 80px;
+  row-gap: 48px;
 `

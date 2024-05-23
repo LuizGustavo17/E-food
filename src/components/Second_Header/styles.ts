@@ -8,6 +8,7 @@ export const Header_Perfil = styled.header`
   display: block;
   text-align: center;
   position: relative;
+  align-items: center;
 `
 export const Image = styled.img`
   margin-top: 0;

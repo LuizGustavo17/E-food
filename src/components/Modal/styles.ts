@@ -66,9 +66,13 @@ export const Add_to_Cart = styled.button`
   position: absolute;
   width: 218px;
   height: 24px;
-  top: 260px;
+  line-height: 16.41px;
+  text-align: center;
+  top: 265px;
   border: none;
   background-color: ${cores.primarypink};
   color: ${cores.red};
   cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
 `

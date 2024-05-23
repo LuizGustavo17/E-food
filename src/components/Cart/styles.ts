@@ -52,6 +52,7 @@ export const Button = styled.button`
   margin-top: 16px;
 `
 export const CartItem = styled.li`
+  position: relative;
   display: flex;
   width: 344px;
   height: 100px;
@@ -76,10 +77,11 @@ export const CartItem = styled.li`
     margin-left: 8px;
   }
   #lixeira {
-    margin-left: 225px;
+    position: absolute;
+    top: 69px;
+    left: 313px;
     height: 16px;
     width: 16px;
-    margin-top:-10px
     cursor: pointer;
   }
 `

@@ -6,7 +6,7 @@ const Footer = () => (
     <Logotipo src={logo} />
     <Container_Svg>
       <svg
-        style={{ margin: '4px' }}
+        style={{ marginRight: '8px' }}
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -38,7 +38,7 @@ const Footer = () => (
         </defs>
       </svg>
       <svg
-        style={{ margin: '4px' }}
+        style={{ marginRight: '8px' }}
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -58,7 +58,6 @@ const Footer = () => (
         </defs>
       </svg>
       <svg
-        style={{ margin: '4px' }}
         width="24"
         height="24"
         viewBox="0 0 24 24"

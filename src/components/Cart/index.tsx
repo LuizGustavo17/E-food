@@ -21,10 +21,9 @@ import { RootReducer } from '../../store'
 import { close, remove, clear } from '../../store/reducers/cart'
 import { usePurchaseMutation } from '../../services/api'
 
-
 const Cart = () => {
   const dispatch = useDispatch()
-  const [purchase, { isLoading, isError, data, isSuccess }] = usePurchaseMutation()
+  const [purchase, { data, isSuccess }] = usePurchaseMutation()
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
   const [showAddress, setShowAddress] = useState(0)
   const [nome, setNome] = useState('')
@@ -40,7 +39,7 @@ const Cart = () => {
   const [numeroError, setNumeroError] = useState(false)
   const clearCart = () => {
     dispatch(clear())
-   }
+  }
   const handleNomeChange = (e: ChangeEvent<HTMLInputElement>) => {
     setNome(e.target.value)
   }
@@ -300,7 +299,7 @@ const Cart = () => {
       </CartContainer>
     )
   } else if (showAddress === 1) {
-    if(items.length==0){
+    if (items.length == 0) {
       setShowAddress(0)
       closeCart()
     }

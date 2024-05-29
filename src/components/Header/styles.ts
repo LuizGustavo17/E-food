@@ -16,5 +16,5 @@ export const Logotipo = styled.img`
 `
 
 export const Logotipo2 = styled(Logotipo)`
-margin-top: 40px;
+  margin-top: 40px;
 `

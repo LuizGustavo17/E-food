@@ -6,9 +6,9 @@ export const Home_Phrase = styled.h1`
   text-align: center;
   color: ${cores.red};
   max-width: 540px;
-  line-height:42.19px;
+  line-height: 42.19px;
   margin-top: 138.5px;
-  margin-left:calc(50vw - 270px);
+  margin-left: calc(50vw - 270px);
 `
 export const Profile_Phrase = styled.h2`
   font-weight: 900px;
@@ -21,7 +21,7 @@ export const Phrase2 = styled(Profile_Phrase)`
 
 export const BannerPhrase1 = styled.h1`
   margin-top: 24px;
-  left:0px;
+  left: 0px;
   font-weight: 100;
   font-size: 32px;
   line-height: 37.5px;
@@ -29,7 +29,7 @@ export const BannerPhrase1 = styled.h1`
 `
 export const BannerPhrase2 = styled.h1`
   margin-top: 156.5px;
-  left:0px;
+  left: 0px;
   font-weight: 900px;
   font-size: 32px;
   line-height: 37.5px;

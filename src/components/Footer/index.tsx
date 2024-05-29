@@ -1,9 +1,9 @@
 import { Container, Container_Svg, P_footer } from './styles'
-import { Logotipo } from '../Header/styles'
+import { Logotipo2 } from '../Header/styles'
 import logo from '../../assets/images/logo.png'
 const Footer = () => (
   <Container>
-    <Logotipo src={logo} />
+    <Logotipo2 src={logo} />
     <Container_Svg>
       <svg
         style={{ marginRight: '8px' }}

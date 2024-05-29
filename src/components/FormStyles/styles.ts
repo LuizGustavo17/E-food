@@ -20,6 +20,7 @@ background-color:${cores.primarypink};
 border:none;
 margin-top:8px;
 margin-bottom:8px;
+padding-left:8px;
 ::placeholder{
     color:${cores.placeholder}
     font-weight:700px;

@@ -1,7 +1,7 @@
-import { Header_Perfil, Image } from './styles'
+import { DivItens, Header_Perfil, Image, Box1, Box2, } from './styles'
 import logo from '../../assets/images/logo.png'
 import { Logotipo } from '../Header/styles'
-import { BannerPhrase1, BannerPhrase2, Phrase1, Phrase2 } from '../Fonts/styles'
+import { BannerPhrase1, BannerPhrase2, Profile_Phrase, Phrase2 } from '../Fonts/styles'
 import { useNavigate } from 'react-router-dom'
 import { open } from '../../store/reducers/cart'
 import { useDispatch, useSelector } from 'react-redux'
@@ -31,17 +31,22 @@ const Second_Header = ({ banner_image, type, name }: Props) => {
   return (
     <>
       <Header_Perfil>
-        <Phrase1 onClick={handleClick}>Restaurantes</Phrase1>
-        <Logotipo src={logo} alt="logotipo do restaurante(garfo e faca)" />
+        <Box2>
+        <Profile_Phrase onClick={handleClick}>Restaurantes</Profile_Phrase>
         <Phrase2 onClick={openCart}>
           {items.length} produto{'('}s{')'} no carrinho
         </Phrase2>
+        </Box2>
+        <Logotipo src={logo} alt="logotipo do restaurante(garfo e faca)" />
       </Header_Perfil>
-      <div style={{ position: 'relative' }}>
+      <DivItens>
+       <Box1>
         <BannerPhrase1>{capitalizeFirstLetter(type)}</BannerPhrase1>
         <BannerPhrase2>{name}</BannerPhrase2>
+       </Box1>
+        
         <Image src={banner_image} />
-      </div>
+      </DivItens>
     </>
   )
 }

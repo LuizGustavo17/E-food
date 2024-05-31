@@ -8,7 +8,8 @@ export const TagContainer = styled.div<Props>`
   color: ${cores.primarypink};
   font-size: 14px;
   font-weight: bold;
-  padding: 4px 6px;
+  padding: 6px 4px;
   display: inline-block;
-  margin: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
 `

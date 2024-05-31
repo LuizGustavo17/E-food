@@ -38,10 +38,9 @@ export const Div_Img = styled.div`
 
 export const Div_Tag = styled.div`
   position: absolute;
-  top: 5px;
+  top: 8px;
   right: 8px;
   background-color: rgba(0, 0, 0, 0);
-  padding: 5px;
 `
 
 export const Estrela = styled(Titulo)`

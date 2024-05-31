@@ -37,4 +37,7 @@ export const Button = styled.button`
   height: 24px;
   margin-left: 8px;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
 `

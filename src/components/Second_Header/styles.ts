@@ -15,7 +15,7 @@ export const Image = styled.img`
   margin-top: 0;
   height: 280px;
   width: 100vw;
-  margin-bottom: 52px;
+  margin-bottom: 56px;
 `
 export const DivItens = styled.div`
   position: relative;

@@ -7,7 +7,7 @@ export const Container = styled.div`
   background-color: ${cores.primarypink};
   display: flex;
   justify-content: center;
-  margin-top: 128px;
+  margin-top: 120px;
   position: relative;
 `
 

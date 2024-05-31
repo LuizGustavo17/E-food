@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 export const Div_Center = styled.div`
-  margin-top: 64px;
+  margin-top: 80px;
   display: flex;
   justify-content: center; /* Alinha os itens horizontalmente */
   align-items: center;

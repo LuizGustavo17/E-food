@@ -29,6 +29,12 @@ const Product = ({ title, description, infos, image, nota, id }: Props) => {
   const handleClick = () => {
     navigate(`/restaurant/${id}`)
   }
+  const getDescricao = (descricao: string) => {
+    if (descricao.length > 248) {
+      return descricao.slice(0, 245) + '...'
+    }
+    return descricao
+  }
   return (
     <Card>
       <Div_Img>
@@ -61,7 +67,7 @@ const Product = ({ title, description, infos, image, nota, id }: Props) => {
             </svg>
           </Estrela>
         </div>
-        <Descricao>{description}</Descricao>
+        <Descricao>{getDescricao(description)}</Descricao>
         <Button onClick={handleClick}>Saiba mais</Button>
       </Div_Border>
     </Card>

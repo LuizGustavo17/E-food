@@ -263,7 +263,7 @@ const Cart = () => {
           <ul style={{ marginBottom: '40px' }}>
             {items.map((item) => (
               <CartItem key={item.id}>
-                <img src={item.foto} alt={item.nome} />
+                <img className="myimg" src={item.foto} alt={item.nome} />
                 <div>
                   <h3>{item.nome}</h3>
                   <p>
@@ -283,7 +283,7 @@ const Cart = () => {
             ))}
           </ul>
           <p>
-            <Pvalue>Valor Total de </Pvalue>
+            <Pvalue>Valor total</Pvalue>
             <Pprice>
               R${' '}
               {getTotalPrice().toLocaleString('pt-BR', {

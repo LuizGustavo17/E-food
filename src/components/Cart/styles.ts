@@ -37,18 +37,19 @@ export const Pvalue = styled.span`
   text-align: center;
 `
 export const Pprice = styled(Pvalue)`
-  margin-left: 190px;
+  margin-left: 214px;
 `
 export const Button = styled.button`
   width: 344px;
   height: 24px;
   background-color: ${cores.primarypink};
   color: ${cores.red};
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 14px;
   text-align: center;
   border: none;
   cursor: pointer;
+  line-height: 16.41px;
   margin-top: 16px;
 `
 export const CartItem = styled.li`
@@ -58,28 +59,30 @@ export const CartItem = styled.li`
   height: 100px;
   margin-bottom: 16px;
   background-color: ${cores.primarypink};
-  img {
+  .myimg {
     width: 80px;
     height: 80px;
     object-fit: cover;
     margin: 8px;
   }
   h3 {
-    font-weight: 900px;
+    font-weight: 900;
     font-size: 18px;
     margin-left: 8px;
     margin-top: 8px;
+    line-height: 21.09px;
   }
   p {
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 14px;
     margin-top: 16px;
     margin-left: 8px;
+    line-height: 22px;
   }
   #lixeira {
     position: absolute;
-    top: 69px;
-    left: 313px;
+    top: 76px;
+    left: 320px;
     height: 16px;
     width: 16px;
     cursor: pointer;

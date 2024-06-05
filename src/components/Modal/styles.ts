@@ -37,28 +37,30 @@ export const Img = styled.img`
 export const Modal_Title = styled.h3`
   position: absolute;
   top: 32px;
-  left: 344px;
-  font-weight: 900px;
+  left: 336px;
+  font-weight: 900;
   font-size: 18px;
   text-align: center;
   color: ${cores.white};
+  line-height: 21.09px;
+  text-align: center;
 `
 export const Modal_Details = styled.p`
   position: absolute;
-  top: 63px;
-  font-weight: 400px;
+  top: 69px;
+  font-weight: 400;
   font-size: 14px;
-  left: 344px;
+  left: 336px;
   line-height: 22px;
   color: ${cores.white};
   padding-right: 32px;
 `
 export const Modal_Persons = styled.p`
   position: absolute;
-  top: 220px;
-  font-weight: 400px;
+  top: 223px;
+  font-weight: 400;
   font-size: 14px;
-  left: 344px;
+  left: 336px;
   line-height: 22px;
   color: ${cores.white};
 `
@@ -68,7 +70,8 @@ export const Add_to_Cart = styled.button`
   height: 24px;
   line-height: 16.41px;
   text-align: center;
-  top: 265px;
+  top: 261px;
+  left: 336px;
   border: none;
   background-color: ${cores.primarypink};
   color: ${cores.red};

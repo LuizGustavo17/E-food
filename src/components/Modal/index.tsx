@@ -25,6 +25,7 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, prato }) => {
   const addToCart = () => {
     dispatch(add(prato))
     dispatch(open())
+    onClose()
   }
   return (
     <Banner_Overlay>

@@ -143,6 +143,40 @@ const Cart = () => {
   const handleMesValChange = (e: ChangeEvent<HTMLInputElement>) => {
     setMesVal(e.target.value)
   }
+  const handlePurchase = () => {
+    const products = items.map((item) => ({
+      id: item.id,
+      price: item.preco
+    }))
+
+    const payload = {
+      products,
+      delivery: {
+        receiver: nome,
+        address: {
+          description: endereco,
+          city: cidade,
+          zipCode: cep,
+          number: parseInt(numero, 10),
+          complement: complemento
+        }
+      },
+      payment: {
+        card: {
+          name: nomeCartao,
+          number: numeroCartao,
+          code: parseInt(cvv, 10),
+          expires: {
+            month: parseInt(mesVal, 10),
+            year: parseInt(anoVal, 10)
+          }
+        }
+      }
+    }
+    purchase(payload)
+    clearCart()
+    setShowAddress(3)
+  }
 
   function validateFormCard() {
     // Variáveis temporárias para armazenar os estados de erro
@@ -183,34 +217,7 @@ const Cart = () => {
       !anoValErrorTemp &&
       !mesValErrorTemp
     ) {
-      purchase({
-        products: [{ id: 1, price: 10 }],
-        delivery: {
-          receiver: nome,
-          address: {
-            // Corrigido de 'newAdress' para 'address'
-            description: endereco,
-            city: cidade,
-            zipCode: cep,
-            number: parseInt(numero, 10), // Certifique-se de que número é um número
-            complement: complemento
-          }
-        },
-        payment: {
-          card: {
-            // Certifique-se de que 'card' é um objeto dentro de 'payment'
-            name: nomeCartao,
-            number: numeroCartao,
-            code: parseInt(cvv, 10), // Certifique-se de que o código é um número
-            expires: {
-              month: parseInt(mesVal, 10), // Certifique-se de que mês é um número
-              year: parseInt(anoVal, 10) // Certifique-se de que ano é um número
-            }
-          }
-        }
-      })
-      clearCart()
-      setShowAddress(3)
+      handlePurchase()
     } else {
       if (nomeCartaoErrorTemp) {
         setNomeCartao('')

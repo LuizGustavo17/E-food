@@ -3,14 +3,14 @@ import { cores } from '../../styles'
 
 export const Title2 = styled.h3`
   color: ${cores.primarypink};
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 16px;
   margin-bottom: 16px;
   line-height: 18.75px;
 `
 export const Label_Text = styled.label`
   color: ${cores.primarypink};
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 14px;
 `
 export const WhiteSpace = styled.input`

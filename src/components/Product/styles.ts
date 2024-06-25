@@ -26,6 +26,15 @@ export const Descricao = styled.p`
   padding-top: 45px;
   margin-bottom: 16px;
   margin-left: 8px;
+  height:140px;
+  overflow-y: scroll; /* Permite a rolagem vertical */
+      scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+    }
+
+    /* Esconde a barra de rolagem no WebKit (Chrome, Safari) */
+    .scrollable-container::-webkit-scrollbar {
+      display: none;
+    }
 `
 export const Img_Card = styled.img`
   width: 472px;

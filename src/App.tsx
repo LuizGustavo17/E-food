@@ -7,7 +7,7 @@ import { store } from './store'
 import Cart from './components/Cart'
 
 const App = () => {
-  const isMobile = window.innerWidth <= 960
+  const isMobile = window.innerWidth <= 1200
 
   if (isMobile) {
     return <h1>Only available for desktops</h1>

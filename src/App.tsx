@@ -7,6 +7,11 @@ import { store } from './store'
 import Cart from './components/Cart'
 
 const App = () => {
+  const isMobile = window.innerWidth <= 768
+
+  if (isMobile) {
+    return <h1>Only available for desktops</h1>
+  }
   return (
     <Provider store={store}>
       <GlobalCSS />
